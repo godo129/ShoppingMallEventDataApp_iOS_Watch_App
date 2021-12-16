@@ -10,22 +10,37 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let tableView = UITableView()
-
+    
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
+        
+        let headerLabel = UILabel(frame: header.bounds)
+        headerLabel.text = "쇼핑몰 이벤트 보기"
+        headerLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        headerLabel.textAlignment = .center
+        header.addSubview(headerLabel)
+        
+        tableView.tableHeaderView = header
+        
+        
         // 줄 없애기
         tableView.separatorStyle = .none
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         tableView.frame = view.bounds
     }
 
@@ -63,5 +78,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         self.present(vc!, animated: true, completion: nil)
         
     }
+  
     
 }
