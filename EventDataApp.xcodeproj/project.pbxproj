@@ -35,6 +35,7 @@
 		F10D7F5C276B793F00C44723 /* EventInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F5B276B793F00C44723 /* EventInterfaceController.swift */; };
 		F10D7F5E276B796A00C44723 /* HomeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F5D276B796A00C44723 /* HomeInterfaceController.swift */; };
 		F10D7F62276B820400C44723 /* HomeRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F61276B820300C44723 /* HomeRowController.swift */; };
+		F10D7F64276B84D300C44723 /* EventRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F63276B84D300C44723 /* EventRowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		F10D7F5B276B793F00C44723 /* EventInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInterfaceController.swift; sourceTree = "<group>"; };
 		F10D7F5D276B796A00C44723 /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
 		F10D7F61276B820300C44723 /* HomeRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRowController.swift; sourceTree = "<group>"; };
+		F10D7F63276B84D300C44723 /* EventRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				F10D7F5B276B793F00C44723 /* EventInterfaceController.swift */,
 				F10D7F5D276B796A00C44723 /* HomeInterfaceController.swift */,
 				F10D7F61276B820300C44723 /* HomeRowController.swift */,
+				F10D7F63276B84D300C44723 /* EventRowController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10D7F5C276B793F00C44723 /* EventInterfaceController.swift in Sources */,
+				F10D7F64276B84D300C44723 /* EventRowController.swift in Sources */,
 				F10D7F62276B820400C44723 /* HomeRowController.swift in Sources */,
 				F10D7F55276B77A600C44723 /* EventManager.swift in Sources */,
 				F10D7F30276B6E7900C44723 /* NotificationController.swift in Sources */,
