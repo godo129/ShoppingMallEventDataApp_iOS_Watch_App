@@ -16,6 +16,8 @@ class HomeInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        setTitle("쇼핑몰 이벤트 보기")
+        
         table.setNumberOfRows(ShoppingMallList.count, withRowType: "row")
         
         for idx in 0..<ShoppingMallList.count {
@@ -41,5 +43,6 @@ class HomeInterfaceController: WKInterfaceController {
         selectedShoppingMall = ShoppingMallList[rowIndex]
         self.pushController(withName: "EventView", context: nil)
     }
+
 
 }

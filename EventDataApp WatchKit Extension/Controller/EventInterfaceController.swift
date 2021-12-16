@@ -18,6 +18,8 @@ class EventInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        setTitle(selectedShoppingMall)
+        
         eventManger.delegate = self
         eventManger.getEventData(shoppingMall: selectedShoppingMall)
         
@@ -41,7 +43,6 @@ extension EventInterfaceController: EventManagerDelegate {
 
         DispatchQueue.main.async {
             
-            print(event.imageURL)
             self.table.setNumberOfRows(event.imageURL.count, withRowType: "Row")
             
             for idx in 0..<event.imageURL.count {
