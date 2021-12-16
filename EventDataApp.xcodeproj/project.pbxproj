@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		73FF35EBABF189C1B7328E05 /* Pods_EventDataApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E487E7182E269AC14A153D1 /* Pods_EventDataApp_WatchKit_Extension.framework */; };
 		F10D7F07276B6E7700C44723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F06276B6E7700C44723 /* AppDelegate.swift */; };
 		F10D7F09276B6E7700C44723 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F08276B6E7700C44723 /* SceneDelegate.swift */; };
-		F10D7F0B276B6E7700C44723 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F0A276B6E7700C44723 /* ViewController.swift */; };
 		F10D7F0E276B6E7700C44723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10D7F0C276B6E7700C44723 /* Main.storyboard */; };
 		F10D7F10276B6E7800C44723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10D7F0F276B6E7800C44723 /* Assets.xcassets */; };
 		F10D7F13276B6E7800C44723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10D7F11276B6E7800C44723 /* LaunchScreen.storyboard */; };
@@ -25,6 +24,12 @@
 		F10D7F30276B6E7900C44723 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F2F276B6E7900C44723 /* NotificationController.swift */; };
 		F10D7F32276B6E7900C44723 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F31276B6E7900C44723 /* ComplicationController.swift */; };
 		F10D7F34276B6E7A00C44723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10D7F33276B6E7A00C44723 /* Assets.xcassets */; };
+		F10D7F48276B724E00C44723 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F47276B724E00C44723 /* EventManager.swift */; };
+		F10D7F4A276B727000C44723 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F49276B727000C44723 /* EventModel.swift */; };
+		F10D7F4C276B728D00C44723 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F4B276B728D00C44723 /* EventData.swift */; };
+		F10D7F4E276B72B900C44723 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F4D276B72B900C44723 /* HomeViewController.swift */; };
+		F10D7F50276B72E400C44723 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F4F276B72E400C44723 /* EventViewController.swift */; };
+		F10D7F52276B743600C44723 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F51276B743600C44723 /* EventCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +87,6 @@
 		F10D7F03276B6E7700C44723 /* EventDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventDataApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10D7F06276B6E7700C44723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F10D7F08276B6E7700C44723 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F10D7F0A276B6E7700C44723 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F10D7F0D276B6E7700C44723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F10D7F0F276B6E7800C44723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F10D7F12276B6E7800C44723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +103,12 @@
 		F10D7F33276B6E7A00C44723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F10D7F35276B6E7A00C44723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10D7F36276B6E7A00C44723 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F10D7F47276B724E00C44723 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		F10D7F49276B727000C44723 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		F10D7F4B276B728D00C44723 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		F10D7F4D276B72B900C44723 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F10D7F4F276B72E400C44723 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		F10D7F51276B743600C44723 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +159,6 @@
 				36F3044C37EEC5044DAB8C5F /* Pods-EventDataApp WatchKit Extension.debug.xcconfig */,
 				091C160224C0B307815862A0 /* Pods-EventDataApp WatchKit Extension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -178,12 +187,12 @@
 		F10D7F05276B6E7700C44723 /* EventDataApp */ = {
 			isa = PBXGroup;
 			children = (
+				F10D7F45276B71D900C44723 /* View */,
+				F10D7F44276B71D500C44723 /* Model */,
+				F10D7F46276B71DD00C44723 /* Controller */,
 				F10D7F06276B6E7700C44723 /* AppDelegate.swift */,
 				F10D7F08276B6E7700C44723 /* SceneDelegate.swift */,
-				F10D7F0A276B6E7700C44723 /* ViewController.swift */,
-				F10D7F0C276B6E7700C44723 /* Main.storyboard */,
 				F10D7F0F276B6E7800C44723 /* Assets.xcassets */,
-				F10D7F11276B6E7800C44723 /* LaunchScreen.storyboard */,
 				F10D7F14276B6E7800C44723 /* Info.plist */,
 			);
 			path = EventDataApp;
@@ -211,6 +220,35 @@
 				F10D7F36276B6E7A00C44723 /* PushNotificationPayload.apns */,
 			);
 			path = "EventDataApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F10D7F44276B71D500C44723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F10D7F47276B724E00C44723 /* EventManager.swift */,
+				F10D7F49276B727000C44723 /* EventModel.swift */,
+				F10D7F4B276B728D00C44723 /* EventData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F10D7F45276B71D900C44723 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F10D7F0C276B6E7700C44723 /* Main.storyboard */,
+				F10D7F11276B6E7800C44723 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F10D7F46276B71DD00C44723 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F10D7F4D276B72B900C44723 /* HomeViewController.swift */,
+				F10D7F4F276B72E400C44723 /* EventViewController.swift */,
+				F10D7F51276B743600C44723 /* EventCollectionViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,8 +473,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F10D7F0B276B6E7700C44723 /* ViewController.swift in Sources */,
 				F10D7F07276B6E7700C44723 /* AppDelegate.swift in Sources */,
+				F10D7F52276B743600C44723 /* EventCollectionViewCell.swift in Sources */,
+				F10D7F4C276B728D00C44723 /* EventData.swift in Sources */,
+				F10D7F50276B72E400C44723 /* EventViewController.swift in Sources */,
+				F10D7F48276B724E00C44723 /* EventManager.swift in Sources */,
+				F10D7F4A276B727000C44723 /* EventModel.swift in Sources */,
+				F10D7F4E276B72B900C44723 /* HomeViewController.swift in Sources */,
 				F10D7F09276B6E7700C44723 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
