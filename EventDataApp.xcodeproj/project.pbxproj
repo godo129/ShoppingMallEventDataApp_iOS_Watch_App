@@ -19,7 +19,6 @@
 		F10D7F1E276B6E7800C44723 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10D7F1C276B6E7800C44723 /* Interface.storyboard */; };
 		F10D7F20276B6E7900C44723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10D7F1F276B6E7900C44723 /* Assets.xcassets */; };
 		F10D7F27276B6E7900C44723 /* EventDataApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F10D7F26276B6E7900C44723 /* EventDataApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F10D7F2C276B6E7900C44723 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F2B276B6E7900C44723 /* InterfaceController.swift */; };
 		F10D7F2E276B6E7900C44723 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F2D276B6E7900C44723 /* ExtensionDelegate.swift */; };
 		F10D7F30276B6E7900C44723 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F2F276B6E7900C44723 /* NotificationController.swift */; };
 		F10D7F32276B6E7900C44723 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F31276B6E7900C44723 /* ComplicationController.swift */; };
@@ -30,6 +29,12 @@
 		F10D7F4E276B72B900C44723 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F4D276B72B900C44723 /* HomeViewController.swift */; };
 		F10D7F50276B72E400C44723 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F4F276B72E400C44723 /* EventViewController.swift */; };
 		F10D7F52276B743600C44723 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F51276B743600C44723 /* EventCollectionViewCell.swift */; };
+		F10D7F55276B77A600C44723 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F54276B77A600C44723 /* EventManager.swift */; };
+		F10D7F57276B77BF00C44723 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F56276B77BF00C44723 /* EventModel.swift */; };
+		F10D7F59276B77CB00C44723 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F58276B77CB00C44723 /* EventData.swift */; };
+		F10D7F5C276B793F00C44723 /* EventInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F5B276B793F00C44723 /* EventInterfaceController.swift */; };
+		F10D7F5E276B796A00C44723 /* HomeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F5D276B796A00C44723 /* HomeInterfaceController.swift */; };
+		F10D7F60276B79ED00C44723 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D7F5F276B79ED00C44723 /* RowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +101,6 @@
 		F10D7F1F276B6E7900C44723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F10D7F21276B6E7900C44723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10D7F26276B6E7900C44723 /* EventDataApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EventDataApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F10D7F2B276B6E7900C44723 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		F10D7F2D276B6E7900C44723 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		F10D7F2F276B6E7900C44723 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F10D7F31276B6E7900C44723 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,12 @@
 		F10D7F4D276B72B900C44723 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F10D7F4F276B72E400C44723 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		F10D7F51276B743600C44723 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		F10D7F54276B77A600C44723 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		F10D7F56276B77BF00C44723 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		F10D7F58276B77CB00C44723 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		F10D7F5B276B793F00C44723 /* EventInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInterfaceController.swift; sourceTree = "<group>"; };
+		F10D7F5D276B796A00C44723 /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
+		F10D7F5F276B79ED00C44723 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +221,8 @@
 		F10D7F2A276B6E7900C44723 /* EventDataApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F10D7F2B276B6E7900C44723 /* InterfaceController.swift */,
+				F10D7F5A276B784700C44723 /* Controller */,
+				F10D7F53276B774300C44723 /* Model */,
 				F10D7F2D276B6E7900C44723 /* ExtensionDelegate.swift */,
 				F10D7F2F276B6E7900C44723 /* NotificationController.swift */,
 				F10D7F31276B6E7900C44723 /* ComplicationController.swift */,
@@ -247,6 +258,26 @@
 				F10D7F4D276B72B900C44723 /* HomeViewController.swift */,
 				F10D7F4F276B72E400C44723 /* EventViewController.swift */,
 				F10D7F51276B743600C44723 /* EventCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F10D7F53276B774300C44723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F10D7F54276B77A600C44723 /* EventManager.swift */,
+				F10D7F56276B77BF00C44723 /* EventModel.swift */,
+				F10D7F58276B77CB00C44723 /* EventData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F10D7F5A276B784700C44723 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F10D7F5B276B793F00C44723 /* EventInterfaceController.swift */,
+				F10D7F5D276B796A00C44723 /* HomeInterfaceController.swift */,
+				F10D7F5F276B79ED00C44723 /* RowController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +333,7 @@
 				F10D7F22276B6E7900C44723 /* Sources */,
 				F10D7F23276B6E7900C44723 /* Frameworks */,
 				F10D7F24276B6E7900C44723 /* Resources */,
+				6DE49129F4244250000A5B4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -383,6 +415,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6DE49129F4244250000A5B4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EventDataApp WatchKit Extension/Pods-EventDataApp WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EventDataApp WatchKit Extension/Pods-EventDataApp WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EventDataApp WatchKit Extension/Pods-EventDataApp WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7AF3D302D29138078009893E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,10 +537,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10D7F5C276B793F00C44723 /* EventInterfaceController.swift in Sources */,
+				F10D7F55276B77A600C44723 /* EventManager.swift in Sources */,
 				F10D7F30276B6E7900C44723 /* NotificationController.swift in Sources */,
+				F10D7F60276B79ED00C44723 /* RowController.swift in Sources */,
+				F10D7F59276B77CB00C44723 /* EventData.swift in Sources */,
+				F10D7F5E276B796A00C44723 /* HomeInterfaceController.swift in Sources */,
 				F10D7F32276B6E7900C44723 /* ComplicationController.swift in Sources */,
 				F10D7F2E276B6E7900C44723 /* ExtensionDelegate.swift in Sources */,
-				F10D7F2C276B6E7900C44723 /* InterfaceController.swift in Sources */,
+				F10D7F57276B77BF00C44723 /* EventModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
