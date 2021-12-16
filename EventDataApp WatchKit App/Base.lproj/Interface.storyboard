@@ -13,11 +13,11 @@
                     <items>
                         <table alignment="left" id="cdK-QG-rtD">
                             <items>
-                                <tableRow identifier="row" id="vhU-lv-hL1" customClass="RowController" customModule="EventDataApp_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="99" alignment="left" layout="vertical" id="b5C-eK-P45">
+                                <tableRow identifier="row" id="vhU-lv-hL1" customClass="HomeRowController" customModule="EventDataApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="128" alignment="left" layout="vertical" id="b5C-eK-P45">
                                         <items>
-                                            <imageView width="136" height="69" alignment="center" id="sie-1T-DWx"/>
-                                            <label width="130" alignment="left" text="Label" textAlignment="center" id="dOX-eT-v3h"/>
+                                            <imageView width="1" height="101" alignment="center" id="sie-1T-DWx"/>
+                                            <label width="1" alignment="left" text="Label" textAlignment="center" id="dOX-eT-v3h"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -35,23 +35,29 @@
             </objects>
             <point key="canvasLocation" x="-47.304347826086953" y="246.65178571428572"/>
         </scene>
-        <!--Event Interface Controller-->
+        <!--EventView-->
         <scene sceneID="bPF-4R-Omg">
             <objects>
-                <controller id="zZH-06-UXi" customClass="EventInterfaceController" customModule="EventDataApp_WatchKit_Extension">
+                <controller identifier="EventView" id="zZH-06-UXi" customClass="EventInterfaceController" customModule="EventDataApp_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="pus-g2-5Yg">
                             <items>
-                                <tableRow id="I1o-wa-L2q">
+                                <tableRow identifier="Row" selectable="NO" id="I1o-wa-L2q" customClass="EventRowController" customModule="EventDataApp_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="148" alignment="left" id="ztb-ox-WT4">
                                         <items>
-                                            <imageView width="136" height="147" alignment="center" id="jg4-w5-axP"/>
+                                            <imageView width="1" height="147" alignment="center" id="jg4-w5-axP"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="image" destination="jg4-w5-axP" id="gFo-Ql-Ql9"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="pus-g2-5Yg" id="Fuy-iF-xaR"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="179.60869565217391" y="201.11607142857144"/>
