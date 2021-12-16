@@ -19,9 +19,10 @@ class HomeInterfaceController: WKInterfaceController {
         table.setNumberOfRows(ShoppingMallList.count, withRowType: "row")
         
         for idx in 0..<ShoppingMallList.count {
-            let row = table.rowController(at: idx) as! RowController
+            let row = table.rowController(at: idx) as! HomeRowController
             row.image.setImage(UIImage(named: ShoppingMallList[idx]))
             row.label.setText(ShoppingMallList[idx])
+            
         }
     }
 
@@ -33,6 +34,12 @@ class HomeInterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        print(rowIndex)
+        selectedShoppingMall = ShoppingMallList[rowIndex]
+        self.pushController(withName: "EventView", context: nil)
     }
 
 }
