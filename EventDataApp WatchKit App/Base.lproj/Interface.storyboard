@@ -99,7 +99,7 @@
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <namedColor name="AccentColor">
-            <color red="1" green="0.46436479489999999" blue="0.026351693669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.46399998664855957" blue="0.026000000536441803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
