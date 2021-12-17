@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
     
     let tableView = UITableView()
     
+    var logoURLList: logoData!
     
+    var shoppingMallManager = ShoppingMallManager()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +32,12 @@ class HomeViewController: UIViewController {
         
         tableView.tableHeaderView = header
         
+        shoppingMallManager.delegate = self
+        shoppingMallManager.getNameList()
         
         // 줄 없애기
         tableView.separatorStyle = .none
-        view.addSubview(tableView)
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         
@@ -46,7 +51,7 @@ class HomeViewController: UIViewController {
 
 }
 
-
+//MARK : - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ShoppingMallList.count
@@ -59,7 +64,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = ShoppingMallList[indexPath.row]
         cell.textLabel?.font = .systemFont(ofSize: 30, weight: .semibold)
         cell.textLabel?.textAlignment = .right
-        cell.imageView?.image = UIImage(named: ShoppingMallList[indexPath.row])
+        cell.imageView?.kf.setImage(with: URL(string: logoURLList.logo[ShoppingMallList[indexPath.row]]!))
         cell.imageView?.frame.size.width = 300
         cell.imageView?.contentMode = .scaleAspectFit
         cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.size.width)!/2.0
@@ -80,4 +85,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
   
     
+}
+
+extension HomeViewController: ShoppingMallDelegate {
+    func didUpdateShopData(_ eventManager: ShoppingMallManager, data: ShoppingModel) {
+        
+        DispatchQueue.main.async {
+            ShoppingMallList = data.ShopList
+            self.logoURLList = data.logo
+            self.view.addSubview(self.tableView)
+            
+        }
+    }
+    
+    func didFailUpdateShopData(error: Error) {
+        print(error)
+    }
 }
