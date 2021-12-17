@@ -5,7 +5,6 @@
 //  Created by hong on 2021/12/16.
 //
 
-import UIKit
 import WatchKit
 
 class EventRowController: NSObject {
