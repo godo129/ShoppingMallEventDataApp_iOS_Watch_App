@@ -12,3 +12,14 @@ struct EventModel {
     let imageURL : [String]
     let detailURL: [String]
 }
+
+
+
+struct ShoppingModel {
+    let ShopList : [String]
+    let logo : logoData
+}
+
+struct logoData {
+    let logo : [String : String]
+}
