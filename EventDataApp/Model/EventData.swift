@@ -7,9 +7,16 @@
 
 import Foundation
 
-let ShoppingMallList = ["교보문고",
+let ShoppingMallList = ["쿠팡",
+                        "11번가",
+                        "파리바게트",
+                        "스타벅스",
+                        "교보문고",
                         "인터파크",
                         "알라딘",
-                        "영풍문고"]
+                        "영풍문고",
+                        "피자헛"
+]
+
 
 var selectedShoppingMall = ""

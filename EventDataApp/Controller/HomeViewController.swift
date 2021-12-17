@@ -61,7 +61,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.textAlignment = .right
         cell.imageView?.image = UIImage(named: ShoppingMallList[indexPath.row])
         cell.imageView?.frame.size.width = 300
-        cell.imageView?.contentMode = .scaleAspectFill
+        cell.imageView?.contentMode = .scaleAspectFit
         cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.size.width)!/2.0
 
         return cell
