@@ -70,6 +70,10 @@ extension EventViewController: EventManagerDelegate {
         print(error)
     }
     
+    @objc func buttonTapped() {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
 }
 
 //MARK : - UICollectionVeiwDataSource, UICollectionViewDelegate
@@ -87,7 +91,20 @@ extension EventViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.eventWeb.load(URLRequest(url: URL(string: eventData.detailURL[indexPath.row])!))
+        
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+//        button.setTitle("<", for: .normal)
+//        button.setTitleColor(.systemTeal, for: .normal)
+//        button.layer.opacity = 0.7
+//        self.eventWeb.addSubview(button)
+        
+        let encodingUrl = eventData.detailURL[indexPath.row].addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        self.eventWeb.load(URLRequest(url: URL(string: encodingUrl)!))
+        
+        
+        
         eventWeb.frame = CGRect(x: 0, y: 40, width: view.frame.size.width, height: view.frame.size.height)
         view.addSubview(eventWeb)
     }
