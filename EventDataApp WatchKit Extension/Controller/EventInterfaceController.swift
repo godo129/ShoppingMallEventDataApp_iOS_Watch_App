@@ -48,13 +48,14 @@ extension EventInterfaceController: EventManagerDelegate {
             for idx in 0..<event.imageURL.count {
                 let row = self.table.rowController(at: idx) as! EventRowController
                 
-                if let url = URL(string: event.imageURL[idx]) {
-                    // Fetch Image Data
-                    if let data = try? Data(contentsOf: url) {
-                        row.image.setImageData(data)
-                    }
-                    
-                }
+                row.image.imageFromUrl(event.imageURL[idx])
+//                if let url = URL(string: event.imageURL[idx]) {
+//                    // Fetch Image Data
+//                    if let data = try? Data(contentsOf: url) {
+//                        row.image.setImageData(data)
+//                    }
+//
+//                }
    
             }
             
