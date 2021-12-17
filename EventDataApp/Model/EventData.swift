@@ -7,7 +7,7 @@
 
 import Foundation
 
-let ShoppingMallList = ["쿠팡",
+var ShoppingMallList = ["쿠팡",
                         "11번가",
                         "파리바게트",
                         "스타벅스",
