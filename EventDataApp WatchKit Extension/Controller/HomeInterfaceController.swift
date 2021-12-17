@@ -12,20 +12,18 @@ import Foundation
 class HomeInterfaceController: WKInterfaceController {
     
     @IBOutlet var table: WKInterfaceTable!
+    
+    var shoppingMallManager = ShoppingMallManager()
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         setTitle("쇼핑몰 이벤트 보기")
         
-        table.setNumberOfRows(ShoppingMallList.count, withRowType: "row")
+        shoppingMallManager.delegate = self
         
-        for idx in 0..<ShoppingMallList.count {
-            let row = table.rowController(at: idx) as! HomeRowController
-            row.image.setImage(UIImage(named: ShoppingMallList[idx]))
-            row.label.setText(ShoppingMallList[idx])
-            
-        }
+        shoppingMallManager.getNameList()
+        
     }
 
     override func willActivate() {
@@ -45,4 +43,59 @@ class HomeInterfaceController: WKInterfaceController {
     }
 
 
+}
+
+extension HomeInterfaceController: ShoppingMallDelegate {
+    func didUpdateShopData(_ eventManager: ShoppingMallManager, data: ShoppingModel) {
+    
+        
+        
+        DispatchQueue.main.async {
+            
+            ShoppingMallList = data.ShopList
+            self.table.setNumberOfRows(ShoppingMallList.count, withRowType: "row")
+            
+            for idx in 0..<ShoppingMallList.count {
+                let row = self.table.rowController(at: idx) as! HomeRowController
+                
+                row.image.imageFromUrl(data.logo.logo[ShoppingMallList[idx]]!)
+//                if let url = URL(string: data.logo.logo[ShoppingMallList[idx]]!) {
+//                    // Fetch Image Data
+//                    if let data = try? Data(contentsOf: url) {
+//                        row.image.setImageData(data)
+//                    }
+//
+//                }
+                row.label.setText(ShoppingMallList[idx])
+                
+            }
+        }
+    }
+    
+    func didFailUpdateShopData(error: Error) {
+        print(error)
+    }
+}
+
+
+extension WKInterfaceImage {
+    public func imageFromUrl(_ urlString: String) {
+
+        if let url = NSURL(string: urlString) {
+
+            let request = NSURLRequest(url: url as URL)
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+
+            let task = session.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in
+                if let imageData = data as Data? {
+                    DispatchQueue.main.async {
+                        self.setImageData(imageData)
+                    }
+                }
+            });
+
+            task.resume()
+        }
+    }
 }
